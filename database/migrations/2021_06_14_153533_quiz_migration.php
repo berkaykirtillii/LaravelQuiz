@@ -16,7 +16,7 @@ class QuizMigration extends Migration
         Schema::create('quizzes', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->longText('Description')->nullable();
+            $table->longText('description')->nullable();
             $table->timestamp('finished_at')->nullable();
             $table->enum('status',['draft','publish','passive'])->default('draft');
             $table->timestamps();
